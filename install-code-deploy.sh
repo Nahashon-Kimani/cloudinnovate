@@ -5,3 +5,6 @@ sudo apt update
   sudo ./install auto
   sudo systemctl start codedeploy-agent
   sudo systemctl enable codedeploy-agent
+
+  # To see the logs of the CodeDeploy agent, you can use the following command:
+  sudo tail -f /var/log/aws/codedeploy-agent/codedeploy-agent.log
