@@ -1,0 +1,26 @@
+  # Create code to deploy this code to AWS Ubuntu EC2 instance using CodeDeploy
+
+version: 0.0
+os: linux
+
+files:
+  - source: /
+    destination: /var/www/html
+
+hooks:
+  BeforeInstall:
+    - location: codedeploy/install_apache2.sh
+      timeout: 300
+      runas: root
+
+  AfterInstall:
+    - location: codedeploy/after_install.sh
+      timeout: 300
+      runas: root
+
+  ApplicationStart:
+    - location: codedeploy/start_apache2.sh
+      timeout: 300
+      runas: root
+
+
