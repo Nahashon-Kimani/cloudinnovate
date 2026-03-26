@@ -1,5 +1,3 @@
-  # Create code to deploy this code to AWS Ubuntu EC2 instance using CodeDeploy
-
 version: 0.0
 os: linux
 
